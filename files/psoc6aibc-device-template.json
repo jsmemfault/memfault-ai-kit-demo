@@ -1,0 +1,71 @@
+{
+    "code": "psoc6aibc",
+    "name": "psoc6aibc",
+    "authType": 2,
+    "attributes": [
+        {
+            "name": "version",
+            "type": "STRING"
+        },
+        {
+            "name": "random",
+            "type": "INTEGER",
+            "description": null,
+            "unit": null
+        },
+        {
+            "name": "baby_cry_detected",
+            "type": "BOOLEAN",
+            "description": null,
+            "unit": null
+        },
+        {
+            "name": "confidence_baby_cry",
+            "type": "DECIMAL",
+            "description": null,
+            "unit": "%"
+        }
+    ],
+    "commands": [
+        {
+            "name": "demo-mode",
+            "command": "demo-mode",
+            "requiredParam": true,
+            "requiredAck": true,
+            "isOTACommand": false
+        },
+        {
+            "name": "board-user-led",
+            "command": "board-user-led",
+            "requiredParam": true,
+            "isOTACommand": false,
+            "requiredAck": true
+        },
+        {
+            "name": "Class Reporting Interval",
+            "command": "set-reporting-interval",
+            "requiredParam": true,
+            "requiredAck": true,
+            "isOTACommand": false
+        },
+        {
+            "name": "set-detection-threshold",
+            "command": "set-detection-threshold",
+            "requiredParam": true,
+            "requiredAck": true,
+            "isOTACommand": false
+        }
+    ],
+    "messageVersion": "2.1",
+    "msgCode": "XG4EJNE",
+    "greenGrass": "0",
+    "wireless": "0",
+    "properties": {
+        "description": null,
+        "dataFrequency": "5",
+        "fileSupport": false
+    },
+    "_meta": {
+        "version": "2.0"
+    }
+}

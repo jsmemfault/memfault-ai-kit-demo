@@ -1,0 +1,18 @@
+MEMFAULT_METRICS_KEY_DEFINE(idle_task_run_time_percent, kMemfaultMetricType_Unsigned)
+
+#if MEMFAULT_FREERTOS_COLLECT_TIMER_STACK_FREE_BYTES
+MEMFAULT_METRICS_KEY_DEFINE(timer_task_stack_free_bytes, kMemfaultMetricType_Unsigned)
+#endif
+
+MEMFAULT_METRICS_KEY_DEFINE(mainTaskWakeups, kMemfaultMetricType_Unsigned)
+MEMFAULT_METRICS_STRING_KEY_DEFINE(motd, sizeof("here goes the message of the day"))
+MEMFAULT_METRICS_KEY_DEFINE(stackHighWaterMark, kMemfaultMetricType_Unsigned)
+
+MEMFAULT_METRICS_SESSION_KEY_DEFINE(listening)
+MEMFAULT_METRICS_KEY_DEFINE_WITH_SESSION(cries, kMemfaultMetricType_Unsigned, listening)
+MEMFAULT_METRICS_KEY_DEFINE_WITH_SESSION(almostCries, kMemfaultMetricType_Unsigned, listening)
+MEMFAULT_METRICS_KEY_DEFINE_WITH_SESSION(definitelyBaby, kMemfaultMetricType_Unsigned, listening)
+MEMFAULT_METRICS_KEY_DEFINE_WITH_SESSION(couldBeOzzy, kMemfaultMetricType_Unsigned, listening)
+MEMFAULT_METRICS_KEY_DEFINE_WITH_SESSION_AND_SCALE_VALUE(appTaskLoad, kMemfaultMetricType_Unsigned, listening, 100)
+MEMFAULT_METRICS_KEY_DEFINE_WITH_SESSION_AND_SCALE_VALUE(highestConfidence, kMemfaultMetricType_Unsigned, listening, 100)
+MEMFAULT_METRICS_KEY_DEFINE_WITH_SESSION_AND_SCALE_VALUE(systemLoad, kMemfaultMetricType_Unsigned, listening, 100)
